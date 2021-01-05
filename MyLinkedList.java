@@ -26,10 +26,10 @@ public class MyLinkedList{
     }
   }
   public boolean add(int index, String value){
-    if (index < 0){
-      return false;
+    if (index < 0 || index > size()){
+      throw new IndexOutOfBoundsException("Given index out of bounds");
     }
-    else if (index > size || size == 0){
+    else if (size == 0){
       return(add(value));
     }
     else if (index == 0){
@@ -54,8 +54,8 @@ public class MyLinkedList{
     }
   }
   public String get(int index){
-    if (index < 0 || index >= size){
-      return null;
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Given index out of bounds");
     }
     else{
       int currentIndex = 0;
