@@ -54,7 +54,18 @@ public class MyLinkedList{
     }
   }
   public String get(int index){
-    return null;
+    if (index < 0 || index >= size){
+      return null;
+    }
+    else{
+      int currentIndex = 0;
+      Node currentNode = start;
+      while (index > currentIndex){
+        currentNode = currentNode.getNext();
+        currentIndex++;
+      }
+      return currentNode.getData();
+    }
   }
   public String set(int index, String value){
     return null;
