@@ -68,7 +68,21 @@ public class MyLinkedList{
     }
   }
   public String set(int index, String value){
-    return null;
+    if (index < 0 || index >= size()){
+      throw new IndexOutOfBoundsException("Given index out of bounds");
+    }
+    else{
+      String temp;
+      int currentIndex = 0;
+      Node currentNode = start;
+      while (index > currentIndex){
+        currentNode = currentNode.getNext();
+        currentIndex++;
+      }
+      temp = currentNode.getData();
+      currentNode.setData(value);
+      return(temp);
+    }
   }
   public String toString(){
     String result = "";
@@ -84,5 +98,20 @@ public class MyLinkedList{
     result += "]";
     return result;
   }
- //Any helper method that returns a Node object MUST BE PRIVATE!
+  /*
+  public String toStringReversed(){
+    String result = "";
+    Node current = end;
+    result += "[";
+    while (current != null){
+      if (current != end){
+        result += ", ";
+      }
+      result += current.getData();
+      current = current.getPrev();
+    }
+    result += "]";
+    return result;
+  }
+  */
 }
