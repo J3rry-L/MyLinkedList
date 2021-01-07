@@ -128,6 +128,13 @@ public class MyLinkedList{
     if (index < 0 || index >= size()){
       throw new IndexOutOfBoundsException("Given index out of bounds");
     }
+    else if (size() == 1){
+      String temp = start.getData();
+      start = null;
+      end = null;
+      size = 0;
+      return temp;
+    }
     else if (index == 0){
       String temp = start.getData();
       start.getNext().setPrev(null);
