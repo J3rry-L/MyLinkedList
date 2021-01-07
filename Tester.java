@@ -47,10 +47,19 @@ public class Tester{
     list1.extend(list2);
     System.out.println(list1);
     System.out.println(list2);
+    System.out.println(list1.size());
+
+    list1.remove(12);
+    System.out.println(list1);
+    list1.remove(0);
+    System.out.println(list1);
+    list1.remove(9);
+    System.out.println(list1);
   }
 }
 /*
 Expected Output[]
+[]
 0
 [element1]
 1
@@ -80,4 +89,8 @@ element5
 [element9, element8, element7, element6, element5, element4, element3, element2, element1, element0]
 [element0, element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11, element12]
 []
+13
+[element0, element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11]
+[element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11]
+[element1, element2, element3, element4, element5, element6, element7, element8, element9, element11]
 */
