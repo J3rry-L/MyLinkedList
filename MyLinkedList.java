@@ -43,8 +43,9 @@ public class MyLinkedList{
     else if (index == size()){
       Node node = new Node(value);
       node.setNext(null);
-      node.setPrev(end);
       end.setNext(node);
+      node.setPrev(end);
+      end = node;
       size++;
     }
     else{
