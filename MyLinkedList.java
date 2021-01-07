@@ -30,7 +30,7 @@ public class MyLinkedList{
     if (index < 0 || index > size()){
       throw new IndexOutOfBoundsException("Given index out of bounds");
     }
-    else if (size == 0){
+    else if (size() == 0){
       add(value);
     }
     else if (index == 0){
@@ -38,6 +38,13 @@ public class MyLinkedList{
       node.setNext(start);
       start.setPrev(node);
       start = node;
+      size++;
+    }
+    else if (index == size()){
+      Node node = new Node(value);
+      node.setNext(null);
+      node.setPrev(end);
+      end.setNext(node);
       size++;
     }
     else{
@@ -100,7 +107,7 @@ public class MyLinkedList{
     result += "]";
     return result;
   }
-  /*
+
   public String toStringReversed(){
     String result = "";
     Node current = end;
@@ -115,5 +122,4 @@ public class MyLinkedList{
     result += "]";
     return result;
   }
-  */
 }
