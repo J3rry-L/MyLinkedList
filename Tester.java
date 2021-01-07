@@ -50,8 +50,7 @@ public class Tester{
   }
 }
 /*
-Expected Output
-[]
+Expected Output[]
 0
 [element1]
 1
@@ -78,4 +77,7 @@ oops
 10
 element0
 element5
+[element9, element8, element7, element6, element5, element4, element3, element2, element1, element0]
+[element0, element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11, element12]
+[]
 */
