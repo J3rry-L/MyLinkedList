@@ -123,4 +123,13 @@ public class MyLinkedList{
     result += "]";
     return result;
   }
+
+  public void extend(MyLinkedList other){
+    end.setNext(other.start);
+    other.start.setPrev(end);
+    size += other.size();
+    other.size = 0;
+    other.start = null;
+    other.end = null;
+  }
 }
