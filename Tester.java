@@ -38,7 +38,7 @@ public class Tester{
     System.out.println(list1.size());
     System.out.println(list1.get(0));
     System.out.println(list1.get(5));
-    //System.out.println(list1.toStringReversed());
+    System.out.println(list1.toStringReversed());
   }
 }
 /*
