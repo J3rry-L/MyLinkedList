@@ -39,6 +39,14 @@ public class Tester{
     System.out.println(list1.get(0));
     System.out.println(list1.get(5));
     System.out.println(list1.toStringReversed());
+
+    MyLinkedList list2 = new MyLinkedList();
+    list2.add("element10");
+    list2.add("element11");
+    list2.add("element12");
+    list1.extend(list2);
+    System.out.println(list1);
+    System.out.println(list2);
   }
 }
 /*
