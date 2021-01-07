@@ -55,6 +55,25 @@ public class Tester{
     System.out.println(list1);
     list1.remove(9);
     System.out.println(list1);
+
+    MyLinkedList a = new MyLinkedList();
+    MyLinkedList b = new MyLinkedList();
+    for(int i = 0; i < 10; i++){
+      if(i < 5){
+        a.add(i+"");
+      }else{
+        b.add(i+"");
+      }
+    }
+    System.out.println();
+    System.out.println("A:"+a+a.size());
+    System.out.println("B:"+b+b.size());
+
+    a.extend(b);
+    System.out.println("A:"+a+a.size());
+    System.out.println("B:"+b+b.size());
+    System.out.println("A reversed:"+a.toStringReversed()+a.size());
+    System.out.println("B reversed:"+b.toStringReversed()+b.size());
   }
 }
 /*
@@ -93,4 +112,11 @@ element5
 [element0, element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11]
 [element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11]
 [element1, element2, element3, element4, element5, element6, element7, element8, element9, element11]
+
+A:[0, 1, 2, 3, 4]5
+B:[5, 6, 7, 8, 9]5
+A:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]10
+B:[]0
+A reversed:[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]10
+B reversed:[]0
 */
